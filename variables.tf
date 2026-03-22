@@ -28,11 +28,19 @@ variable "public_subnets" {
     cidr              = string
     availability_zone = string
   }))
-  default = []
 }
 
 variable "private_subnets" {
   description = "Lista de CIDR`s para as subnets privadas."
+  type = list(object({
+    name              = string
+    cidr              = string
+    availability_zone = string
+  }))
+}
+
+variable "database_subnets" {
+  description = "Lista de Database Subnets."
   type = list(object({
     name              = string
     cidr              = string
