@@ -92,11 +92,6 @@ module "networking" {
 }
 ```
 
-## Terraform docs
-1. Instale o terraform-docs: `brew install terraform-docs` ou `choco install terraform-docs`
-2. Gere documentação:
-   `terraform-docs markdown modules/networking >> README.md`
-
 ## Visualização da arquitetura
 ```mermaid
 flowchart LR
