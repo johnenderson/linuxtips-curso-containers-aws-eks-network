@@ -105,15 +105,10 @@ flowchart LR
   A --> D[Database Subnets]
   B --> E[IGW]
   C --> F[NAT Gateway]
-  D --> G[Network ACL (DB)]
-  A --> H[Default SG]
+  D --> G["Network ACL (DB)"]
+  A --> H["Default SG"]
 ```
 
 ## Observações
 - O recurso `aws_ssm_parameter` utiliza `count` para cada lista de subnets. Certifique-se de que `count = length(var.public_subnets)` (e equivalentes) esteja presente antes de usar `count.index`.
 - Se você receber `Reference to "count" in non-counted context`, confirme que a declaração `count = ...` não foi removida.
-
-## Contato
-- Mantido por Linus Tips
-- Issue no GitHub welcome
-
