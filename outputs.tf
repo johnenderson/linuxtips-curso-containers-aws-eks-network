@@ -1,15 +1,27 @@
 output "vpc_id" {
-  value = aws_ssm_parameter.vpc.id
+  value = module.networking.vpc_id
 }
 
 output "public_subnet_ids" {
-  value = aws_ssm_parameter.public_subnets[*].id
+  value = module.networking.public_subnet_ids
 }
 
 output "private_subnet_ids" {
-  value = aws_ssm_parameter.private_subnets[*].id
+  value = module.networking.private_subnet_ids
 }
 
 output "database_subnet_ids" {
-  value = aws_ssm_parameter.database_subnets[*].id
+  value = module.networking.database_subnet_ids
+}
+
+output "network_acl_id" {
+  value = module.networking.network_acl_id
+}
+
+output "security_group_id" {
+  value = module.networking.security_group_id
+}
+
+output "ssm_parameter_ids" {
+  value = module.networking.ssm_parameter_ids
 }

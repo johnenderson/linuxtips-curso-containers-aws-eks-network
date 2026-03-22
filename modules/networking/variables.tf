@@ -3,12 +3,6 @@ variable "project_name" {
   type        = string
 }
 
-variable "region" {
-  description = "Região AWS"
-  type        = string
-  default     = "us-east-1"
-}
-
 variable "vpc_cidr" {
   description = "CIDR principal da VPC."
   type        = string
@@ -39,7 +33,7 @@ variable "private_subnets" {
 }
 
 variable "database_subnets" {
-  description = "Lista de subnets de database"
+  description = "Lista de subnets de banco de dados"
   type = list(object({
     name              = string
     cidr              = string
