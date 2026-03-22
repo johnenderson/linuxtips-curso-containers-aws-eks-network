@@ -75,7 +75,7 @@ variable "enable_nat_gateway" {
 variable "create_default_sg" {
   description = "Criar um security group padrão para a VPC"
   type        = bool
-  default     = true
+  default     = false
 }
 
 variable "security_group_rules" {
